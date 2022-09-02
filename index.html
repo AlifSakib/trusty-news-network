@@ -4,15 +4,82 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Google Fonts  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&family=Quicksand&display=swap"
+      rel="stylesheet"
+    />
     <!-- Favicon  -->
     <link
       rel="shortcut icon"
       href="./images/icons/news.png"
       type="image/x-icon"
     />
+    <!-- Daisy Ui And TailWind CDN  -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@2.24.0/dist/full.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- TailWind Config  -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              clifford: "#da373d",
+            },
+          },
+          fontFamily: {
+            poppins: ["Poppins", "sans-serif"],
+            quicksand: ["Quicksand", "sans-serif"],
+          },
+        },
+      };
+    </script>
     <title>Trusty News Network</title>
   </head>
-  <body>
+  <body class="font-quicksand">
+    <header class="w-9/12 mx-auto">
+      <nav>
+        <div class="navbar bg-base-100">
+          <div class="flex-1">
+            <a class="btn btn-ghost normal-case text-xl">Trusty News Network</a>
+          </div>
+          <div class="flex-none gap-2">
+            <div class="flex gap-6 font-bold mx-6">
+              <a href="./index.html">Home</a>
+              <a href="#">Blogs</a>
+            </div>
+            <div class="dropdown dropdown-end">
+              <label tabindex="0" class="btn btn-ghost btn-circle avatar">
+                <div class="w-10 rounded-full">
+                  <img src="https://placeimg.com/80/80/people" />
+                </div>
+              </label>
+              <ul
+                tabindex="0"
+                class="mt-3 p-2 shadow menu menu-compact dropdown-content bg-base-100 rounded-box w-52"
+              >
+                <li>
+                  <a class="justify-between">
+                    Profile
+                    <span class="badge">New</span>
+                  </a>
+                </li>
+                <li><a>Settings</a></li>
+                <li><a>Logout</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <hr class="border-1 border-black mt-6" />
+    </header>
+
     <!-- JavaScript Files  -->
     <script src="./js/script.js"></script>
   </body>
