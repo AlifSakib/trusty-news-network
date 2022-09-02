@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Google Fonts  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&family=Quicksand&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Favicon  -->
+    <link
+      rel="shortcut icon"
+      href="./images/icons/news.png"
+      type="image/x-icon"
+    />
+    <!-- Font Awesome  -->
+    <script
+      src="https://kit.fontawesome.com/5043da5981.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Daisy Ui And TailWind CDN  -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@2.24.0/dist/full.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/flowbite@1.5.3/dist/flowbite.min.css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- TailWind Config  -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              clifford: "#da373d",
+              background: "##F6F6F6",
+            },
+          },
+          fontFamily: {
+            poppins: ["Poppins", "sans-serif"],
+            quicksand: ["Quicksand", "sans-serif"],
+          },
+        },
+      };
+    </script>
+    <title>Trusty News Network Blogs</title>
+  </head>
+  <body class="font-quicksand bg-background">
+    <header class="w-9/12 mx-auto">
+      <nav>
+        <div class="navbar bg-base-100">
+          <div class="flex-1">
+            <a class="btn btn-ghost normal-case text-xl">Trusty News Network</a>
+          </div>
+          <div class="flex-none gap-2">
+            <div class="flex gap-6 font-bold mx-6">
+              <a href="./index.html">Home</a>
+              <a href="./blogs.html">Blogs</a>
+            </div>
+            <div class="dropdown dropdown-end">
+              <label tabindex="0" class="btn btn-ghost btn-circle avatar">
+                <div class="w-10 rounded-full">
+                  <img src="https://placeimg.com/80/80/people" />
+                </div>
+              </label>
+              <ul
+                tabindex="0"
+                class="mt-3 p-2 shadow menu menu-compact dropdown-content bg-base-100 rounded-box w-52"
+              >
+                <li>
+                  <a class="justify-between">
+                    Profile
+                    <span class="badge">New</span>
+                  </a>
+                </li>
+                <li><a>Settings</a></li>
+                <li><a>Logout</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <hr class="border-1 border-black my-6" />
+    </header>
+
+    <section class="w-9/12 mx-auto">
+      <div
+        id="accordion-flush"
+        data-accordion="collapse"
+        data-active-classes="bg-white dark:bg-gray-900 text-gray-900 dark:text-white"
+        data-inactive-classes="text-gray-500 dark:text-gray-400"
+      >
+        <h2 id="accordion-flush-heading-1">
+          <button
+            type="button"
+            class="flex items-center justify-between w-full py-5 font-medium text-left border-b border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 text-gray-900 dark:text-white"
+            data-accordion-target="#accordion-flush-body-1"
+            aria-expanded="true"
+            aria-controls="accordion-flush-body-1"
+          >
+            <span>What is Flowbite?</span>
+            <svg
+              data-accordion-icon=""
+              class="w-6 h-6 rotate-180 shrink-0"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                clip-rule="evenodd"
+              ></path>
+            </svg>
+          </button>
+        </h2>
+        <div
+          id="accordion-flush-body-1"
+          class=""
+          aria-labelledby="accordion-flush-heading-1"
+        >
+          <div
+            class="py-5 font-light border-b border-gray-200 dark:border-gray-700"
+          >
+            <p class="mb-2 text-gray-500 dark:text-gray-400">
+              Flowbite is an open-source library of interactive components built
+              on top of Tailwind CSS including buttons, dropdowns, modals,
+              navbars, and more.
+            </p>
+            <p class="text-gray-500 dark:text-gray-400">
+              Check out this guide to learn how to
+              <a
+                href="/docs/getting-started/introduction/"
+                class="text-blue-600 dark:text-blue-500 hover:underline"
+                >get started</a
+              >
+              and start developing websites even faster with components on top
+              of Tailwind CSS.
+            </p>
+          </div>
+        </div>
+        <h2 id="accordion-flush-heading-2">
+          <button
+            type="button"
+            class="flex items-center justify-between w-full py-5 font-medium text-left text-gray-500 border-b border-gray-200 dark:border-gray-700 dark:text-gray-400"
+            data-accordion-target="#accordion-flush-body-2"
+            aria-expanded="false"
+            aria-controls="accordion-flush-body-2"
+          >
+            <span>Is there a Figma file available?</span>
+            <svg
+              data-accordion-icon=""
+              class="w-6 h-6 shrink-0"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                clip-rule="evenodd"
+              ></path>
+            </svg>
+          </button>
+        </h2>
+        <div
+          id="accordion-flush-body-2"
+          class="hidden"
+          aria-labelledby="accordion-flush-heading-2"
+        >
+          <div
+            class="py-5 font-light border-b border-gray-200 dark:border-gray-700"
+          >
+            <p class="mb-2 text-gray-500 dark:text-gray-400">
+              Flowbite is first conceptualized and designed using the Figma
+              software so everything you see in the library has a design
+              equivalent in our Figma file.
+            </p>
+            <p class="text-gray-500 dark:text-gray-400">
+              Check out the
+              <a
+                href="https://flowbite.com/figma/"
+                class="text-blue-600 dark:text-blue-500 hover:underline"
+                >Figma design system</a
+              >
+              based on the utility classes from Tailwind CSS and components from
+              Flowbite.
+            </p>
+          </div>
+        </div>
+        <h2 id="accordion-flush-heading-3">
+          <button
+            type="button"
+            class="flex items-center justify-between w-full py-5 font-medium text-left text-gray-500 border-b border-gray-200 dark:border-gray-700 dark:text-gray-400"
+            data-accordion-target="#accordion-flush-body-3"
+            aria-expanded="false"
+            aria-controls="accordion-flush-body-3"
+          >
+            <span
+              >What are the differences between Flowbite and Tailwind UI?</span
+            >
+            <svg
+              data-accordion-icon=""
+              class="w-6 h-6 shrink-0"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                clip-rule="evenodd"
+              ></path>
+            </svg>
+          </button>
+        </h2>
+        <div
+          id="accordion-flush-body-3"
+          class="hidden"
+          aria-labelledby="accordion-flush-heading-3"
+        >
+          <div
+            class="py-5 font-light border-b border-gray-200 dark:border-gray-700"
+          >
+            <p class="mb-2 text-gray-500 dark:text-gray-400">
+              The main difference is that the core components from Flowbite are
+              open source under the MIT license, whereas Tailwind UI is a paid
+              product. Another difference is that Flowbite relies on smaller and
+              standalone components, whereas Tailwind UI offers sections of
+              pages.
+            </p>
+            <p class="mb-2 text-gray-500 dark:text-gray-400">
+              However, we actually recommend using both Flowbite, Flowbite Pro,
+              and even Tailwind UI as there is no technical reason stopping you
+              from using the best of two worlds.
+            </p>
+            <p class="mb-2 text-gray-500 dark:text-gray-400">
+              Learn more about these technologies:
+            </p>
+            <ul class="pl-5 text-gray-500 list-disc dark:text-gray-400">
+              <li>
+                <a
+                  href="https://flowbite.com/pro/"
+                  class="text-blue-600 dark:text-blue-500 hover:underline"
+                  >Flowbite Pro</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://tailwindui.com/"
+                  rel="nofollow"
+                  class="text-blue-600 dark:text-blue-500 hover:underline"
+                  >Tailwind UI</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script src="https://unpkg.com/flowbite@1.5.3/dist/flowbite.js"></script>
+  </body>
+</html>
