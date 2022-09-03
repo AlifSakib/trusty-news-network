@@ -31,6 +31,7 @@ loadCatagories();
 
 const getCategoryId = (category_id) => {
   spinner(true);
+
   const url = `https://openapi.programming-hero.com/api/news/category/${category_id}`;
 
   const loadNews = async () => {
@@ -45,7 +46,6 @@ const getCategoryId = (category_id) => {
   };
 
   const displayNews = (news) => {
-    console.log(news);
     const articleContainer = document.getElementById("articles-container");
     const countContainer = document.getElementById("count-container");
     const countNews = document.getElementById("numbers-of-news");
@@ -251,19 +251,16 @@ const showMore = (news_id) => {
             </div>
           </div>
         </div>
-
       `;
     });
     showModal();
   };
   newsDetails();
 };
-
 function showModal() {
   const showModal = document.getElementById("extralarge-modal");
   showModal.classList.remove("hidden");
 }
-
 function closeModal() {
   const closeModal = document.getElementById("extralarge-modal");
   closeModal.classList.add("hidden");
