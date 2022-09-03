@@ -171,7 +171,16 @@ const showMore = (news_id) => {
     details.forEach((detail) => {
       console.log(detail);
 
-      const { title, image_url: thumb, details } = detail;
+      const {
+        title,
+        image_url: thumb,
+        details,
+        total_view,
+        author: { name, published_date },
+        rating: { number, badge },
+
+        others_info: { is_todays_pick, is_trending },
+      } = detail;
       const modalContainer = document.getElementById("modal");
 
       modalContainer.innerHTML = `
@@ -215,6 +224,18 @@ const showMore = (news_id) => {
                 >
                 ${details.slice(400, 1200)}
                 </p>
+                 <ul class="font-bold">
+                 <li>Total Views : ${total_view ? total_view : " No Views"}</li>
+                 <li>Author Name : ${name ? name : " Author not Found"}</li>
+                 <li>Published Date :${
+                   published_date ? published_date : " Date not defined"
+                 } </li>
+                 <li>Rating : ${number}</li>
+                 <li>Quality : ${badge}</li>
+                 <li>Quality : ${
+                   is_trending ? "Top Trending" : " Not in trending"
+                 }</li>
+                 </ul>
               </div>
               <!-- Modal footer -->
               <div
