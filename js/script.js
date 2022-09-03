@@ -18,8 +18,10 @@ const displayCatagories = (categories) => {
   categories.forEach((category) => {
     const { category_id: id, category_name: name } = category;
     const catagorieList = document.createElement("li");
+    catagorieList.classList.add("my-4");
+    // catagorieList.classList.add("md:mt-0");
     catagorieList.innerHTML = `
-    <button class="category-btn" onclick="getCategoryId('${id}')">${name}</button>
+    <button class="category-btn btn rounded-full w-48" onclick="getCategoryId('${id}')">${name}</button>
     `;
     catagoriesContainer.appendChild(catagorieList);
   });
@@ -43,6 +45,7 @@ const getCategoryId = (category_id) => {
   };
 
   const displayNews = (news) => {
+    console.log(news);
     const articleContainer = document.getElementById("articles-container");
     const countContainer = document.getElementById("count-container");
     const countNews = document.getElementById("numbers-of-news");
@@ -82,7 +85,7 @@ const getCategoryId = (category_id) => {
        <div class="card card-side bg-base-100 shadow-xl my-10 flex flex-col md:flex-row">
             <figure class="px-6 py-6">
                <img
-                class="rounded-lg"
+                class="rounded-lg md:h-64 md:w-48"
                  src="${image}"
                  alt="newsThumb"
                />
@@ -90,9 +93,9 @@ const getCategoryId = (category_id) => {
             <div class="card-body">
                <h2 class="card-title">${title}</h2>
                <p>${details.slice(0, 200)}</p>
-               <p>${details.slice(200, 300)}</p>
+               <p>${details.slice(200, 300)}...</p>
                <!-- Article Detils -->
-               <div class="flex justify-between items-center flex-col md:flex-row space-y-6 md:space-y-0 mt-6 md:mt-0">
+               <div class="flex justify-between items-center flex-col md:flex-row space-y-6 md:space-y-0 mt-6 md:mt-0 ">
                  <!-- Author  -->
                  <div class="flex items-center gap-4">
                    <img class="h-10 rounded-full" src="${img}" alt="" />
@@ -113,7 +116,7 @@ const getCategoryId = (category_id) => {
 
                  <!-- Ratings -->
 
-                 <div class="flex items-center">
+                 <div class="flex lg:flex items-center md:hidden ">
                      <svg aria-hidden="true" class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Rating star</title><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
                      <p class="ml-2 text-sm font-bold text-gray-900 dark:text-white">${number}</p>
                      <span class="w-1 h-1 mx-1.5 bg-gray-500 rounded-full dark:bg-gray-400"></span>
@@ -126,7 +129,7 @@ const getCategoryId = (category_id) => {
                  type="button"
                  data-modal-toggle="extralarge-modal"
                  >
-                 Extra large modal</button>
+                 Show Details</button>
                  </div>
                  <!-- Author  End-->
                </div>
